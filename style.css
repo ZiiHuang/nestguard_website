@@ -1,0 +1,212 @@
+/* Reset some default browser styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Basic font and background */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f8f9fa;
+    color: #333;
+    font-family: 'Roboto', sans-serif;
+}
+/* Top blue bar */
+.top-bar {
+    background-color: #5c8dc1;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    position: fixed;     /* stays in place while scrolling */
+    top: 0;              /* stick to the very top */
+    left: 0;             /* align to left edge */
+    width: 100%;         /* span full screen width */
+    z-index: 1000;       /* keep it above other elements */
+}
+
+
+/* Logo image size */
+.logo img {
+    height: 80px; /* adjust as needed */
+    width: auto;  /* keeps the aspect ratio */
+    margin: auto auto auto 50px;
+}
+
+/* Style the nav links */
+.top-bar nav {
+    margin-left: auto; /* pushes nav to the right */
+}
+
+.top-bar nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    font-weight: bold;
+}
+
+.top-bar nav a:hover {
+    text-decoration: underline;
+}
+
+/* About Us section styling */
+
+
+.home_background {
+    position: relative;
+    width: 100%;
+}
+
+/* Make image full width and auto height */
+.home_background img {
+    width: 100%;
+    height: auto;
+    display: block;
+    z-index: 0;
+}
+
+/* Dark overlay covers whole section */
+.home_background .overlay {
+    position: absolute;
+    top: 0; 
+    left: 0;
+    width: 100%; 
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.345);
+    z-index: 1;
+}
+
+/* Text content centered over everything */
+.home_content {
+    position: absolute;
+    top: 50%; 
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    z-index: 2;
+}
+
+.home_logo {
+    display: block;    /* make it behave like a block element */
+    margin: 0 auto 20px; /*margin: top right bottom left; */
+    max-width: 250px;
+    height: auto;
+}
+
+.home_title {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.home_subtitle {
+    font-size: 1.2rem;
+}
+
+.rentals_button {
+    display: inline-block;       /* lets us set padding and size */
+    padding: 24px 25px;
+    background-color: #5c8dc1;   /* blue color */
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+    border-radius: 4px;
+    text-decoration: none;       /* remove underline */
+    margin-top: 20px;             /* space above button */
+    transition: background-color 0.3s ease;
+}
+
+.rentals_button:hover {
+    background-color: #4a78a4;   /* darker blue on hover */
+}
+.pay_button {
+    display: inline-block;       /* lets us set padding and size */
+    padding: 24px 70px;
+    background-color: #f57c00;   /* blue color */
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+    border-radius: 4px;
+    text-decoration: none;       /* remove underline */
+    margin-top: 20px;             /* space above button */
+    margin-left: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.pay_button:hover {
+    background-color: #e96b00;   /* darker blue on hover */
+}
+
+/* Container for both columns */
+.about_container {
+    display: flex;
+    align-items: flex-start;   /* align to top */
+    gap: 20px;                 /* space between image and text */
+}
+
+/* Column for images */
+.profile_column {
+    display: flex;
+    flex-direction: column;   /* stack images vertically */
+    gap: 20px;                /* space between images */
+    margin: 20px auto 20px 150px;
+}
+
+/* Profile image styling */
+.profile1, .profile2 {
+    max-width: 300px;  /* adjust as needed */
+    height: auto;
+    background-color: #fff;
+    border-radius: 6px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    
+}
+
+/* About text styling */
+.about_text {
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 6px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    flex: 1; /* take remaining space */
+    margin: 20px 150px;
+}
+.about_text h2 {
+    text-align: center;
+    margin-bottom: 20px; /* space below heading */
+}
+
+.about_text ul {
+    margin-left: 2em;   /* shift the whole list, bullets included */
+    padding-left: 0;    /* optional, removes default extra padding */
+  }
+  
+  .about_text li {
+    margin-bottom: 8px; /* add space between bullet points */
+    line-height: 1.6;   /* more readable */
+  }
+  
+
+.about_text p {
+    line-height:2.2; /* default is about 1.2–1.4 */
+}
+
+
+#contact {
+    background-color: #5c8dc1; /* pick your color */
+    color: white;              /* make text readable */
+    padding: 40px 20px;         /* space inside the section */
+}
+
+/* Optional: style the inner container */
+.contact_container {
+    padding: 20px;
+    max-width: 900px;
+    margin: 0 auto;             /* center container horizontally */
+    text-align: center;         /* center text */
+}
+
+.contact_container h2 {
+    margin-bottom: 20px;
+}
