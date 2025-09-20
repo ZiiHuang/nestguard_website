@@ -303,48 +303,9 @@ body {
 
 
 
-/* --- Global safe tweaks (keep desktop intact) --- */
-body { 
-  overflow-x: hidden;           /* no sideways scroll on any device */
-  padding-top: 110px;           /* offset for your fixed header; adjust if needed */
-}
-#home, #about, #rentals, #contact { 
-  scroll-margin-top: 120px;     /* anchors not hidden by fixed header */
-}
 
-/* --- Mobile-only fixes (apply at <= 700px so desktop is unchanged) --- */
-@media (max-width: 700px) {
-  /* Header: allow wrapping and shrink logo/nav spacing on phones */
-  .top-bar { flex-wrap: wrap; gap: 10px; padding: 12px 16px; }
-  .top-bar .logo img { height: 48px; margin: 0; }
-  .top-bar nav { margin-left: 0; display: flex; flex-wrap: wrap; gap: 12px; }
-  .top-bar nav a { margin-left: 0; padding: 6px 8px; border-radius: 8px; }
 
-  /* Hero: scale text/buttons only on phones */
-  .home_title { font-size: 28px; }
-  .home_subtitle { font-size: 16px; }
-  .rentals_button, .pay_button { 
-    font-size: 1rem; 
-    padding: 12px 16px; 
-    margin-top: 12px; 
-  }
 
-  /* About: stack columns and remove big side margins on phones */
-  .about_container { flex-direction: column; gap: 16px; }
-  .profile_column { margin: 16px auto 0; }
-  .about_text { margin: 0 16px 16px; padding: 16px; }
-  .profile1, .profile2 { max-width: 100%; }
-}
 
-/* --- Very small phones: tighten rentals grid a bit --- */
-@media (max-width: 360px) {
-  .rentals_grid { grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
-}
 
-/* --- Tablet+: restore two-column About (optional refinement) --- */
-@media (min-width: 700px) and (max-width: 999px) {
-  .about_container { flex-direction: row; }
-  .profile_column { margin: 20px 0 20px 40px; }
-  .about_text { margin: 20px 40px; }
-}
 
